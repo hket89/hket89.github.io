@@ -2,7 +2,7 @@
   "name": "hket89.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/hket89.github.io",
+  "homepage": "https://hket89.github.io/",
   "scripts": {
     "dev": "vite",
     "typecheck": "tsc -p tsconfig.json --noEmit",
@@ -11,6 +11,10 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.9",
+    "@mui/material": "^7.3.9",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
   },
