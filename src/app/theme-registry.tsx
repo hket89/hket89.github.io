@@ -13,8 +13,7 @@ export function ThemeRegistry({ children }: { children: React.ReactNode }) {
     cache.compat = true
     const prevInsert = cache.insert.bind(cache)
     let inserted: string[] = []
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    cache.insert = (...args: any[]) => {
+    cache.insert = function (...args) {
       const serialized = args[1]
       if (cache.inserted[serialized.name] === undefined) {
         inserted.push(serialized.name)
