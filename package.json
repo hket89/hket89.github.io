@@ -4,27 +4,25 @@
   "private": true,
   "homepage": "https://hket89.github.io/",
   "scripts": {
-    "dev": "vite",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
-    "build": "pnpm typecheck && vite build",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.3.9",
     "@mui/material": "^7.3.9",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@types/node": "^25.5.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react-swc": "^3.7.1",
-    "gh-pages": "^6.1.1",
-    "typescript": "^5.5.3",
-    "vite": "^5.4.8"
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.5.3"
   }
 }
