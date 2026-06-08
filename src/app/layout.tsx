@@ -34,6 +34,10 @@ export const metadata: Metadata = {
     '12+ years building scalable systems, cloud-native microservices, and AI-powered pipelines. Senior Software Engineer at SEEK.',
   metadataBase: new URL('https://hket89.github.io'),
   alternates: { canonical: '/' },
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+  },
   openGraph: {
     title: 'Hong Ket Lo — Senior Software Engineer',
     description:
