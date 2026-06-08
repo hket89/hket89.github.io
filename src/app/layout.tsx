@@ -26,6 +26,9 @@ const jsonLd = {
 }
 
 export const metadata: Metadata = {
+  verification: {
+    google: '_3oGt6OqJiDSornjWC-H5gFxPbD2Tvr75_L1-JcCeyo',
+  },
   title: 'Hong Ket Lo — Senior Software Engineer',
   description:
     '12+ years building scalable systems, cloud-native microservices, and AI-powered pipelines. Senior Software Engineer at SEEK.',
