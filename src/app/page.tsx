@@ -66,7 +66,7 @@ const OrgBadge = ({ children }: { children: React.ReactNode }) => (
 );
 
 const SectionLabel = ({ num, label }: { num: string; label: string }) => (
-  <Stack direction="row" spacing={1.5} alignItems="center">
+  <Stack direction="row" spacing={1.5} sx={{ alignItems: 'center' }}>
     <Typography sx={{ fontFamily: 'inherit', fontSize: '0.72rem', color: C.amber }}>{num}</Typography>
     <Box sx={{ width: 3, height: 3, borderRadius: '50%', bgcolor: C.dimmer }} />
     <Typography sx={{ fontFamily: 'inherit', fontSize: '0.72rem', color: C.dim, letterSpacing: '0.12em' }}>{label}</Typography>
@@ -74,7 +74,7 @@ const SectionLabel = ({ num, label }: { num: string; label: string }) => (
 );
 
 const ProgressRow = ({ label, pct, color = C.amber }: { label: string; pct: number; color?: string }) => (
-  <Stack direction="row" spacing={1.5} alignItems="center">
+  <Stack direction="row" spacing={1.5} sx={{ alignItems: 'center' }}>
     <Typography sx={{ fontFamily: 'inherit', fontSize: '0.69rem', color: C.dim, width: 130, flexShrink: 0 }}>{label}</Typography>
     <Box sx={{ flex: 1, height: '3px', bgcolor: C.borderFaint, borderRadius: '2px' }}>
       <Box sx={{ width: `${pct}%`, height: '100%', bgcolor: color, borderRadius: '2px' }} />
@@ -194,9 +194,9 @@ export default function App() {
         borderBottom: `1px solid ${C.border}`,
       }}>
         <Container maxWidth="lg">
-          <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ py: 1.5 }}>
+          <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'space-between', py: 1.5 }}>
             {/* Brand */}
-            <Stack direction="row" spacing={1} alignItems="center">
+            <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
               <Dot color={C.green} size={7} />
               <Typography sx={{ fontFamily: 'inherit', fontSize: '0.82rem', color: C.white, fontWeight: 600 }}>
                 hket89::portfolio
@@ -230,7 +230,7 @@ export default function App() {
 
       {/* ── HERO ── */}
       <Container maxWidth="lg" sx={{ pt: { xs: 7, md: 10 }, pb: { xs: 6, md: 9 } }}>
-        <Grid container spacing={{ xs: 4, md: 6 }} alignItems="start">
+        <Grid container spacing={{ xs: 4, md: 6 }} sx={{ alignItems: 'start' }}>
 
           {/* Left */}
           <Grid size={{ xs: 12, md: 7 }}>
@@ -338,8 +338,8 @@ export default function App() {
                   <Typography sx={{ fontFamily: 'inherit', fontSize: '0.6rem', color: C.dim, letterSpacing: '0.12em', mb: 1.5 }}>CERTIFICATIONS</Typography>
                   <Stack spacing={0}>
                     {profile.certifications.map((c) => (
-                      <Stack key={c.name} direction="row" justifyContent="space-between" alignItems="center"
-                        sx={{ py: 1, borderBottom: `1px solid ${C.borderFaint}` }}>
+                      <Stack key={c.name} direction="row"
+                        sx={{ justifyContent: 'space-between', alignItems: 'center', py: 1, borderBottom: `1px solid ${C.borderFaint}` }}>
                         <Typography sx={{ fontFamily: 'inherit', fontSize: '0.78rem', color: C.text, flex: 1, pr: 2 }}>{c.name}</Typography>
                         <Tag label="cert" />
                       </Stack>
@@ -352,8 +352,8 @@ export default function App() {
                   <Typography sx={{ fontFamily: 'inherit', fontSize: '0.6rem', color: C.dim, letterSpacing: '0.12em', mb: 1.5 }}>// EXPLORING NOW</Typography>
                   <Stack spacing={0}>
                     {profile.exploring.map((item) => (
-                      <Stack key={item.title} direction="row" justifyContent="space-between" alignItems="center"
-                        sx={{ py: 1, borderBottom: `1px solid ${C.borderFaint}` }}>
+                      <Stack key={item.title} direction="row"
+                        sx={{ justifyContent: 'space-between', alignItems: 'center', py: 1, borderBottom: `1px solid ${C.borderFaint}` }}>
                         <Typography sx={{ fontFamily: 'inherit', fontSize: '0.78rem', color: C.text, flex: 1, pr: 2 }}>{item.title}</Typography>
                         <Tag label="now" />
                       </Stack>
@@ -366,7 +366,7 @@ export default function App() {
                   <Typography sx={{ fontFamily: 'inherit', fontSize: '0.6rem', color: C.dim, letterSpacing: '0.12em', mb: 1.5 }}>LANGUAGES</Typography>
                   <Stack spacing={0.8}>
                     {profile.languages.map((lang) => (
-                      <Stack key={lang.name} direction="row" justifyContent="space-between">
+                      <Stack key={lang.name} direction="row" sx={{ justifyContent: 'space-between' }}>
                         <Typography sx={{ fontFamily: 'inherit', fontSize: '0.78rem', color: C.text }}>{lang.name}</Typography>
                         <Typography sx={{ fontFamily: 'inherit', fontSize: '0.72rem', color: C.dim }}>{lang.level}</Typography>
                       </Stack>
@@ -382,7 +382,7 @@ export default function App() {
       {/* ── PROJECTS ── */}
       <Box component="section" id="projects" sx={sectionSx}>
         <Container maxWidth="lg">
-          <Stack direction="row" justifyContent="space-between" alignItems="flex-end" sx={{ mb: 4 }}>
+          <Stack direction="row" sx={{ justifyContent: 'space-between', alignItems: 'flex-end', mb: 4 }}>
             <Box>
               <SectionLabel num="02" label="FEATURED PROJECTS" />
               <Typography sx={{ fontFamily: 'inherit', fontSize: { xs: '1.1rem', md: '1.35rem' }, color: C.white, mt: 1 }}>
@@ -405,12 +405,12 @@ export default function App() {
                     '&:hover': { borderColor: C.dim, bgcolor: C.cardHover },
                   }}>
                     {/* Header */}
-                    <Stack direction="row" justifyContent="space-between" alignItems="flex-start">
-                      <Stack direction="row" spacing={1} alignItems="center" sx={{ flexWrap: 'wrap', gap: 0.75, flex: 1, mr: 1 }}>
+                    <Stack direction="row" sx={{ justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                      <Stack direction="row" spacing={1} sx={{ alignItems: 'center', flexWrap: 'wrap', gap: 0.75, flex: 1, mr: 1 }}>
                         <Typography sx={{ fontFamily: 'inherit', fontSize: '0.88rem', fontWeight: 700, color: C.white }}>{project.name}</Typography>
                         {org && <OrgBadge>{org}</OrgBadge>}
                       </Stack>
-                      <Stack direction="row" spacing={0.75} alignItems="center" sx={{ flexShrink: 0 }}>
+                      <Stack direction="row" spacing={0.75} sx={{ alignItems: 'center', flexShrink: 0 }}>
                         <Dot color={status.color} size={7} />
                         <Typography sx={{ fontFamily: 'inherit', fontSize: '0.68rem', color: C.dim }}>{status.label}</Typography>
                       </Stack>
@@ -473,7 +473,7 @@ export default function App() {
                   <Typography sx={{ fontFamily: 'inherit', fontSize: '0.88rem', fontWeight: 600, color: C.amber, mb: 1.5 }}>{job.role}</Typography>
                   <Stack spacing={0.6} component="ul" sx={{ pl: 0, m: 0, listStyle: 'none' }}>
                     {job.bullets.map((b) => (
-                      <Stack key={b} direction="row" spacing={1.5} component="li" alignItems="flex-start">
+                      <Stack key={b} direction="row" spacing={1.5} component="li" sx={{ alignItems: 'flex-start' }}>
                         <Box sx={{ color: C.dimmer, fontSize: '0.75rem', pt: '4px', flexShrink: 0 }}>—</Box>
                         <Typography sx={{ fontFamily: 'inherit', fontSize: '0.8rem', color: C.dim, lineHeight: 1.8 }}>{b}</Typography>
                       </Stack>
@@ -524,7 +524,7 @@ export default function App() {
                 borderTop: `1px solid ${C.borderFaint}`,
                 '&:last-child': { borderBottom: `1px solid ${C.borderFaint}` },
               }}>
-                <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent="space-between" alignItems={{ sm: 'center' }}>
+                <Stack direction={{ xs: 'column', sm: 'row' }} sx={{ justifyContent: 'space-between', alignItems: { sm: 'center' } }}>
                   <Box>
                     <Typography sx={{ fontFamily: 'inherit', fontSize: '0.88rem', fontWeight: 700, color: C.white }}>{edu.degree}</Typography>
                     <Typography sx={{ fontFamily: 'inherit', fontSize: '0.78rem', color: C.dim, mt: 0.3 }}>{edu.institution}</Typography>
@@ -540,7 +540,7 @@ export default function App() {
       {/* ── FOOTER ── */}
       <Box component="footer" sx={{ borderTop: `1px solid ${C.border}`, py: 3, mt: 8 }}>
         <Container maxWidth="lg">
-          <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent="space-between" alignItems={{ sm: 'center' }} spacing={1}>
+          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1} sx={{ justifyContent: 'space-between', alignItems: { sm: 'center' } }}>
             <Typography sx={{ fontFamily: 'inherit', fontSize: '0.72rem', color: C.dimmer }}>© {year} Hong Ket Lo</Typography>
             <Typography sx={{ fontFamily: 'inherit', fontSize: '0.72rem', color: C.dimmer }}>built with React · Next.js · MUI</Typography>
           </Stack>
