@@ -3,51 +3,45 @@ import { createTheme } from '@mui/material/styles';
 export const theme = createTheme({
   palette: {
     mode: 'dark',
-    primary: { main: '#f5b944' },
-    secondary: { main: '#4ade80' },
-    background: {
-      default: '#0d0f12',
-      paper: '#111318'
-    },
-    text: {
-      primary: '#c9d1d9',
-      secondary: '#7d8590'
-    }
+    primary:    { main: '#7c8cff' },
+    secondary:  { main: '#9aa6ff' },
+    background: { default: '#0f1115', paper: '#16191f' },
+    text:       { primary: '#e9eaec', secondary: '#9aa0ab' },
   },
-  shape: { borderRadius: 6 },
+  shape: { borderRadius: 8 },
   typography: {
-    fontFamily: '"JetBrains Mono", "IBM Plex Mono", monospace',
+    fontFamily: 'var(--font-inter), "Helvetica Neue", Arial, sans-serif',
     allVariants: {
-      fontFamily: '"JetBrains Mono", "IBM Plex Mono", monospace',
-    }
+      fontFamily: 'var(--font-inter), "Helvetica Neue", Arial, sans-serif',
+    },
   },
   components: {
     MuiCssBaseline: {
       styleOverrides: {
         ':root': { colorScheme: 'dark' },
         body: {
-          background: '#0d0f12',
-          fontFamily: '"JetBrains Mono", "IBM Plex Mono", monospace',
+          background: '#0f1115',
+          fontFamily: 'var(--font-inter), "Helvetica Neue", Arial, sans-serif',
         },
-        '*': { boxSizing: 'border-box' },
-        'html': { scrollBehavior: 'smooth' },
-      }
+        '*':  { boxSizing: 'border-box' },
+        html: { scrollBehavior: 'smooth' },
+      },
     },
     MuiCard: {
       styleOverrides: {
         root: {
-          backgroundColor: '#111318',
-          border: '1px solid rgba(255,255,255,0.1)',
-          borderRadius: 6,
+          backgroundColor: '#16191f',
+          border: '1px solid rgba(255,255,255,0.08)',
+          borderRadius: 8,
           boxShadow: 'none',
           backgroundImage: 'none',
-        }
-      }
+        },
+      },
     },
     MuiDivider: {
       styleOverrides: {
-        root: { borderColor: 'rgba(255,255,255,0.1)' }
-      }
-    }
-  }
+        root: { borderColor: 'rgba(255,255,255,0.08)' },
+      },
+    },
+  },
 });

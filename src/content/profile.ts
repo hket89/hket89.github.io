@@ -282,6 +282,19 @@ export const profile: Profile = {
       techStack: ['Node.js', 'TypeScript', 'AWS Lambda', 'SNS', 'SQS', 'PostgreSQL', 'DynamoDB']
     },
     {
+      name: 'Non-Profit Website',
+      subtitle: 'lixinbc.vercel.app · Next.js + Sanity CMS',
+      description:
+        'Public-facing church website built from scratch — content-managed blogs and events authored in Sanity Studio, with a Facebook Graph API integration surfacing social feeds.',
+      bullets: [
+        'Sanity v5 CMS with embedded Studio for non-technical content editors to publish blog posts and events.',
+        'Dynamic routes for blogs and events with GROQ-powered queries.',
+        'Facebook Graph API integration proxied via a Next.js API route for live social feeds.',
+        'Deployed on Vercel with App Router and React 19.',
+      ],
+      techStack: ['Next.js', 'Sanity CMS', 'TypeScript', 'React 19', 'MUI', 'Vercel'],
+    },
+    {
       name: 'Zero-Downtime Maintenance Page System',
       subtitle: 'SEEK · ReactJS + Cloudflare Worker + CloudFront + S3',
       description:
