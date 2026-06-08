@@ -542,7 +542,7 @@ export default function App() {
         <Container maxWidth="lg">
           <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent="space-between" alignItems={{ sm: 'center' }} spacing={1}>
             <Typography sx={{ fontFamily: 'inherit', fontSize: '0.72rem', color: C.dimmer }}>© {year} Hong Ket Lo</Typography>
-            <Typography sx={{ fontFamily: 'inherit', fontSize: '0.72rem', color: C.dimmer }}>built with React · Vite · MUI</Typography>
+            <Typography sx={{ fontFamily: 'inherit', fontSize: '0.72rem', color: C.dimmer }}>built with React · Next.js · MUI</Typography>
           </Stack>
         </Container>
       </Box>

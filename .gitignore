@@ -10,11 +10,9 @@
 
 # production
 /build
-/dist
 
 # misc
 .DS_Store
-.vite
 .cache
 *.tsbuildinfo
 .env.local
